@@ -1,9 +1,9 @@
 ﻿/*
-Author: <your name>
-Date:   <date>
+Author: <Allison Drake>
+Date:   <10/05/2019>
 CTEC 135: Microsoft Software Development with C#
 
-<Solution Name>
+<CS_Core_Constructs_I>
 
 <Problem description from README.md file. Make sure the comment text is 
 reformatted to fit 1-80 column display, with appropriate indentations to 
@@ -35,13 +35,37 @@ namespace Prob1
     {
         static void Main(string[] args)
         {
-            #region example of a code region
-            // some code
+            #region 1: variable declarations
+            double a = 0;
+            System.Double b = 0;
+            double c = new double();
             #endregion
 
-            #region another code region
-            // some code
+            #region 2: variable initialization
+            // declare CLS compliant numeric type variables
+            System.Byte myByte = 127;
+            System.Int16 myShort = 32767;
+            System.Int32 myInt = 2147483647;
+            System.Int64 myLong = 9223372036854775807;
+            System.Single myFloat = 3.5f;
+            System.Double myDouble = 12.3;
+            System.Decimal myDecimal = 7.9m;
+
+            // prints values variables to terminal with format specifiers
+            Console.WriteLine("Byte: {0}", myByte);
+            Console.WriteLine("Short: {0:n}", myShort);
+            Console.WriteLine("Integer: {0:c}", myInt);
+            Console.WriteLine("Long: {0:e}", myLong);
+            Console.WriteLine("Float: {0:f}", myFloat);
+            Console.WriteLine("Double: {0}", myDouble);
+            Console.WriteLine("Decimal: {0}", myDecimal);
             #endregion
+
+            #region 3: Max/Min Values
+            // prints the minimum and maximum value available for Double 
+            Console.WriteLine("The minimum value of Double is: {0}", Double.MinValue);
+            Console.WriteLine("The maximum value of Double is: {0}", Double.MaxValue);
+            #endregion  
         }
     }
 }
